@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Stack with jjavascript</title>
+        <script>
+            let data = []
+            let currentSize = data.length;
+            let max = 5;
+            function push() {
+                let newVal = document.getElementById('newEl').value;
+                if (currentSize >= max) {
+                    alert("stack is full youcan not add" + newVal);
+
+                }
+                data[currentSize] = newVal;
+                currentSize += 1;
+            }
+            function pop() {
+                if (currentSize > 0) {
+                    currentSize -= 1;
+                    data.length = currentSize;
+                } else {
+                    alert("stack is already empty")
+                }
+            }
+           function display(){
+            for(let i=0;i<=currentSize-1;i++){
+                console.log(data[i])
+            }
+           }
+        </script>
+    </head>
+
+    <body>
+        <h1>Stack with jjavascript</h1>
+        <input type="text" placeholder="Enter Stack Element" id="newel" />
+
+        <button onclick="push()">Add element to stack</button>
+        <button onclick="pop()">Remove element to stack</button>
+        <button onclick="display()">Display all element</button>
+
+    </body>
+
+</html>

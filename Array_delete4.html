@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Delete Element In Array</title>
+    <script>
+        // let data =[39,29,39,49,49];
+        // let position =3;
+        // for(let i=position; i<data.length-1;i++)
+        // {
+        //     data[i]=data[i+1]
+        // }
+        // data.length=data.length-1;
+        // console.log(data)
+        function remaove()
+        {
+             let data =[39,29,39,49,49];
+        let position =document.getElementById('position').value;
+        position=parseInt(position)
+        for(let i=position; i<data.length-1;i++)
+        {
+            data[i]=data[i+1]
+        }
+        data.length=data.length-1;
+        console.log(data)
+        }
+    
+    </script>
+</head>
+<body>
+    <input type="text" id="position" placeholder="enter position"/>
+    <button onclick="remaove()">Remove element</button>
+
+
+</body>
+</html>
